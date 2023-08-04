@@ -97,48 +97,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-yuzu
+theme: hexo-theme-oasis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
-
-since_year: 2023
-
-# 此处的theme_config.root请设置与root相一致（一般在url下一行）
-theme_config:
-  root: /
-
-post_copy:
-  text: 署名-非商业性使用-相同方式共享
-  text_en: CC BY-NC-SA 2.5 CN
-  link: https://creativecommons.org/licenses/by-nc-sa/2.5/cn/
-
-# 自定义侧边栏
-menu:
-  Archives:
-    widget: Archives # 三种：Archives | Posts | Tags
-  Tags:
-    widget: Tags
-
-# 右上角
-otherMenu2:
-  关于: /about
-
-# 备案
-beian:
-  enable: false
-  icp: 
-
-# toc
-toc: true
-
-visit_count:
-  type: busuanzi
-  # or
-  # type: visitor-counter
-  # url: //your.counter.site/count.php
 
 marked:
   prependRoot: true
