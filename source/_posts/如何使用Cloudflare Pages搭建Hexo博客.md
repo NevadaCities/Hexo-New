@@ -22,7 +22,7 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 
 ## 2. 资源
 
-**① 安装Node.js**
+<p style="font-size:1.25em">① 安装Node.js</p>
 
 接下里就是资源准备。先从[Node.js](https://nodejs.org/zh-cn/download/ "Node.js")的官网下载Windows可用的Node.js安装到电脑
 
@@ -33,11 +33,11 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 
 要注意安装完Node.js之后要重启电脑，环境变量才会生效。
 
-**② 安装GitHub Desktop**
+<p style="font-size:1.25em">② 安装GitHub Desktop</p>
 
 安装完毕后，我们要安装[GitHub Desktop](https://desktop.github.com/ "GitHub Desktop")到电脑，GitHub在[docs.github.com](https://docs.github.com/cn/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop "GitHub Docs")详细写明了安装方法，这里便不再详细解释。
 
-**③ 安装Hexo到文件夹**
+<p style="font-size:1.25em">③ 安装Hexo到文件夹</p>
 
 然后我们新建一个空文件夹，然后打开PowerShell或者CMD，输入cd命令打开到刚才新建的文件夹，这里我们用“hexo”举例。
 
@@ -54,7 +54,7 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 ![安装Hexo到文件夹](InstallHexoOver.webp "安装Hexo到文件夹")
 <p style="text-align:center;color:grey;">安装Hexo到文件夹</p>
 
-**④ 生成Hexo资源目录**
+<p style="font-size:1.25em">④ 生成Hexo资源目录</p>
 
 然后我们输入`npx hexo init source`生成一个Hexo资源目录，名叫source。
 
@@ -87,7 +87,7 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 
 ## 2. 上传Hexo资源文件
 
-**① 登录GitHub Desktop**
+<p style="font-size:1.25em">① 登录GitHub Desktop</p>
 
 本人用的是GitHub Desktop作为GitHub的管理软件，所以这里用GitHub Desktop举例，也可以使用其他的软件，如[SourceTree](https://www.sourcetreeapp.com/)等，这里就不详细介绍了。首先我们打开GitHub Desktop，点击File并点击Options打开设置页面。
 
@@ -116,7 +116,7 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 
 登录完成后按照提示返回到GitHub Desktop即可。更多详细操作请看[docs.github.com](https://docs.github.com/cn/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github)。
 
-**② 上传Hexo资源文件到GitHub仓库**
+<p style="font-size:1.25em">② 上传Hexo资源文件到GitHub仓库</p>
 
 打开我们的GitHub Desktop。我这里已经有仓库了，所以显示的界面应该和刚安装完的是不一样的。
 
