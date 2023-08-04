@@ -1,0 +1,3 @@
+[submodule "themes/hexo-theme-yuzu"]
+	path = themes/hexo-theme-yuzu
+	url = https://github.com/NevadaCities/hexo-theme-yuzu
