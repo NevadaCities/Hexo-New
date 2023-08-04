@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -140,7 +140,6 @@ visit_count:
   # type: visitor-counter
   # url: //your.counter.site/count.php
 
-post_asset_folder: true
 marked:
   prependRoot: true
   postAsset: true
