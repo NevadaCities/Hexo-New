@@ -6,61 +6,24 @@ tag:
 - Hexo
 ---
 
-## 目录
-
-<ul>
-    <li><a href="#1">前言</a></li>
-    <li><a href="#2">准备所需资源</a>
-        <ul style="margin-top:0;margin-bottom:0;padding-left:30px;">
-        <li><a href="#2-1">账户</a></li>
-        <li><a href="#2-2">资源</a>
-            <ul style="margin-top:0;margin-bottom:0;padding-left:30px;">
-            <li><a href="#2-2-1">安装Node.js</a></li>
-            <li><a href="#2-2-2">安装GitHub Desktop</a></li>
-            <li><a href="#2-2-3">安装Hexo到文件夹</a></li>
-            <li><a href="#2-2-4">生成Hexo资源目录</a></li>
-            </ul>
-        </li>
-        </ul>
-    </li>
-    <li><a href="#3">开始上传Hexo资源到GitHub仓库</a>
-        <ul style="margin-top:0;margin-bottom:0;padding-left:30px;">
-        <li><a href="#3-1">创建新的GitHub仓库</a></li>
-        <li><a href="#3-2">上传Hexo资源文件</a>
-            <ul style="margin-top:0;margin-bottom:0;padding-left:30px;">
-            <li><a href="#3-2-1">登录GitHub Desktop</a></li>
-            <li><a href="#3-2-2">上传Hexo资源文件到GitHub仓库</a></li>
-            </ul>
-        </li>
-        </ul>
-    </li>
-    <li><a href="#4">使用Cloudflare Pages进行自动化部署</a>
-        <ul style="margin-top:0;margin-bottom:0;padding-left:30px;">
-        <li><a href="#4-1">准备部署</a></li>
-        <li><a href="#4-2">开始部署</a></li>
-        </ul>
-    </li>
-    <li><a href="#5">后记</a></li>
-</ul>
-
-## 前言<a name="1"></a>
+# 一、前言
 
 在七月二日我用[Hexo](https://hexo.io/ "Hexo")做了一个静态页博客，原本是打算用[Travis CI](https://travis-ci.org/ "Travis CI")进行自动化部署，然后经过朋友推荐尝试使用[GitHub Actions](https://github.com/features/actions "GitHub Actions")，两者都因为需要编写CI配置文件和部署麻烦，我都放弃了。我就打算使用[Cloudflare Pages](https://pages.cloudflare.com/ "Cloudflare Pages")来部署Hexo。接下来我将会介绍如何使用Cloudflare Pages来部署Hexo博客。
 
-## 准备所需资源<a name="2"></a>
+# 二、准备所需资源
 
-**账户**&#32;<a name="2-1"></a>
+## 1. 账户
 
 首先准备以下账号。
 
-1. [GitHub](https://github.com "GitHub")
-2. [Cloudflare](https://dash.cloudflare.com "Cloudflare")
+[GitHub账号](https://github.com "GitHub")
+[Cloudflare账号](https://dash.cloudflare.com "Cloudflare")
 
 GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细说明了。
 
-**资源**&#32;<a name="2-2"></a>
+## 2. 资源
 
-**1. 安装Node.js**&#32;<a name="2-2-1"></a>
+### ① 安装Node.js
 
 接下里就是资源准备。先从[Node.js](https://nodejs.org/zh-cn/download/ "Node.js")的官网下载Windows可用的Node.js安装到电脑
 
@@ -71,11 +34,11 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 
 要注意安装完Node.js之后要重启电脑，环境变量才会生效。
 
-**2. 安装GitHub Desktop**&#32;<a name="2-2-2"></a>
+### ② 安装GitHub Desktop
 
 安装完毕后，我们要安装[GitHub Desktop](https://desktop.github.com/ "GitHub Desktop")到电脑，GitHub在[docs.github.com](https://docs.github.com/cn/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop "GitHub Docs")详细写明了安装方法，这里便不再详细解释。
 
-**3. 安装Hexo到文件夹**&#32;<a name="2-2-3"></a>
+### ③ 安装Hexo到文件夹
 
 然后我们新建一个空文件夹，然后打开PowerShell或者CMD，输入cd命令打开到刚才新建的文件夹，这里我们用“hexo”举例。
 
@@ -92,7 +55,7 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 ![安装Hexo到文件夹](InstallHexoOver.webp "安装Hexo到文件夹")
 <p style="text-align:center;color:grey;">安装Hexo到文件夹</p>
 
-**4. 生成Hexo资源目录**&#32;<a name="2-2-4"></a>
+### ④ 生成Hexo资源目录
 
 然后我们输入`npx hexo init source`生成一个Hexo资源目录，名叫source。
 
@@ -104,9 +67,9 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 ![生成Hexo资源目录](NewSourceOver.webp "生成Hexo资源目录")
 <p style="text-align:center;color:grey;">生成Hexo资源目录</p>
 
-## 开始上传Hexo资源到GitHub仓库<a name="3"></a>
+# 三、开始上传Hexo资源到GitHub仓库
 
-**创建新的GitHub仓库**&#32;<a name="3-1"></a>
+## 1. 创建新的GitHub仓库
 
 登录GitHub主页，然后在左边的Repository（仓库）一栏，点击New新建仓库。
 
@@ -123,9 +86,9 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 ![新的仓库](NewRepositoryOver.webp "新的仓库")
 <p style="text-align:center;color:grey;">新的仓库</p>
 
-**上传Hexo资源文件**&#32;<a name="3-2"></a>
+## 2. 上传Hexo资源文件
 
-**1. 登录GitHub Desktop**&#32;<a name="3-2-1"></a>
+### ① 登录GitHub Desktop
 
 本人用的是GitHub Desktop作为GitHub的管理软件，所以这里用GitHub Desktop举例，也可以使用其他的软件，如[SourceTree](https://www.sourcetreeapp.com/)等，这里就不详细介绍了。首先我们打开GitHub Desktop，点击File并点击Options打开设置页面。
 
@@ -154,7 +117,7 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 
 登录完成后按照提示返回到GitHub Desktop即可。更多详细操作请看[docs.github.com](https://docs.github.com/cn/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github)。
 
-**2. 上传Hexo资源文件到GitHub仓库**&#32;<a name="3-2-2"></a>
+### ② 上传Hexo资源文件到GitHub仓库
 
 打开我们的GitHub Desktop。我这里已经有仓库了，所以显示的界面应该和刚安装完的是不一样的。
 
@@ -206,9 +169,9 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 ![上传文件到仓库](UploadFilesOver.webp "上传文件到仓库")
 <p style="text-align:center;color:grey;">上传文件到仓库</p>
 
-## 使用Cloudflare Pages进行自动化部署<a name="4"></a>
+# 四、使用Cloudflare Pages进行自动化部署
 
-**准备部署**&#32;<a name="4-1"></a>
+## 1. 准备部署
 
 登录Cloudflare Dashboard，在右边一排服务中点击“网页”。
 
@@ -230,7 +193,7 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 ![选择需要部署的仓库](SelectRepository.webp "选择需要部署的仓库")
 <p style="text-align:center;color:grey;">选择需要部署的仓库</p>
 
-**开始部署**&#32;<a name="4-2"></a>
+## 2. 开始部署
 
 在这里可以设置Pages显示的项目名称和分支。
 
@@ -252,10 +215,10 @@ GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细�
 ![构建完成](BuildOver.webp "构建完成")
 <p style="text-align:center;color:grey;">构建完成</p>
 
-## 后记<a name="5"></a>
+# 五、后记
 
-到这里所有的部署工作已经全部完成了。你可以在后期给Hexo加上你自己喜欢的主题，我用的主题是[Apollo](https://github.com/pinggod/hexo-theme-apollo)，你可以在[Hexo Themes](https://hexo.io/themes/)寻找你自己喜欢的主题。
+到这里所有的部署工作已经全部完成了。你可以在后期给Hexo加上你自己喜欢的主题，我用的主题是[Yuzu](https://github.com/Cerallin/hexo-theme-yuzu)，你可以在[Hexo Themes](https://hexo.io/themes/)寻找你自己喜欢的主题。
 
 也可以给Cloudflare Pages套上Cloudflare加速，我就不在这里详解设置方法了，各位用搜索引擎都搜得到配置方法的。
 
-然后，开始你的写作吧！
+**然后，开始你的写作吧！**
