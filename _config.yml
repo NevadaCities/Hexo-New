@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: LinBeitsi's Blog
+title: 'LinBeitsi's Blog'
 subtitle: ''
-description: 'A blog by LinBeitsi by Hexo'
+description: 'A blog by LinBeitsi'
 keywords:
 author: LinBeitsi
 language: zh
@@ -139,3 +139,8 @@ visit_count:
   # or
   # type: visitor-counter
   # url: //your.counter.site/count.php
+
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
