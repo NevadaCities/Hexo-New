@@ -132,7 +132,7 @@ beian:
   icp: 
 
 # toc
-toc: true
+toc: false
 
 visit_count:
   type: busuanzi

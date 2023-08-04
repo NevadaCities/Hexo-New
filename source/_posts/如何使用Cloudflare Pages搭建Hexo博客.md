@@ -16,8 +16,7 @@ tag:
 
 首先准备以下账号。
 
-[GitHub账号](https://github.com "GitHub")
-[Cloudflare账号](https://dash.cloudflare.com "Cloudflare")
+[GitHub账号](https://github.com "GitHub") [Cloudflare账号](https://dash.cloudflare.com "Cloudflare")
 
 GitHub账号与Cloudflare的账号网上都有注册方法我这里就不详细说明了。
 
